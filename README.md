@@ -39,6 +39,9 @@ This Flask application allows users to upload datasets and perform various data 
 └── report.html           # Generated report file
 ```
 
-
+2. Install Libraries:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
    
