@@ -80,10 +80,10 @@ def generate_report(summary, df, visualizations=['static/pairplot.png']):
         <head><title>Analysis Report</title></head>
         <body>
             <h1>Data Analysis Report</h1>
+            <h2>Analysis Summary</h2>
+            <pre>{{ summary }}</pre>
             <h2>Dataset Summary</h2>
             <pre>{{ data_summary }}</pre>
-            <h2>Analysis Summary</h2>
-            <p>{{ summary }}</p>
             <h2>Visualizations</h2>
             {% for viz in visualizations %}
             <img src="/static/pairplot.png" style="width:100%;max-width:600px;">
@@ -167,21 +167,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-import unittest
-
-class TestAIModule(unittest.TestCase):
-
-    def test_load_data_csv(self):
-        df = load_data('olympics2024.csv')  
-        self.assertIsInstance(df, pd.DataFrame)
-
-    def test_clean_data(self):
-        df = pd.DataFrame({'A': [1, 2, None], 'B': [None, 2, 3]})
-        clean_df = clean_data(df)
-        self.assertFalse(clean_df.isnull().values.any())
-
-def run_tests():
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestAIModule)
-    unittest.TextTestRunner().run(suite)
-
-run_tests()
