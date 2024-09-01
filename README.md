@@ -44,4 +44,10 @@ This Flask application allows users to upload datasets and perform various data 
    pip install -r requirements.txt
    ```
 
+3. To run code
+   ```bash
+   python app.py
+   ```
+   
+
    
