@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Employee - Data Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload your data file</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="datafile" required>
+            <label for="analysis_type">Choose analysis type:</label>
+            <select name="analysis_type" id="analysis_type">
+                <option value="regression">Linear Regression</option>
+                <option value="clustering">K-Means Clustering</option>
+                <option value="classification">Decision Tree Classification</option>
+            </select>
+            <label for="target_column">Target column (for regression/classification):</label>
+            <input type="text" id="target_column" name="target_column">
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</body>
+</html>
