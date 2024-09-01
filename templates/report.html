@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Report</title>
+</head>
+<body>
+    <h1>Analysis Report</h1>
+    <p>{{ summary }}</p>
+    <h2>Visualizations</h2>
+    <img src="/static/pairplot.png" alt="Visualization">
+    <br><br>
+    <a href="{{ url_for('download_report') }}">Download Full Report</a>
+</body>
+</html>
